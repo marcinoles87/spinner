@@ -23,7 +23,7 @@ function App() {
 
           <h1>Spin the wheel </h1>
 
-          <span id="wheel"> </span>
+          <span id="wheel"></span>
 
           <button className="spinButton"  onClick={handleButton}> Spin the wheel</button>
       
