@@ -3,14 +3,16 @@ import './App.css';
 
 function App() {
 
-  const radius = Math.floor(Math.random()*100) ;
+  
   const wheel = document.getElementById('wheel');
-  console.log(radius);
-  console.log(wheel)
+  
+ 
+  const handleButton = () => {
 
-  const handleButton = (radius) => {
-
-    wheel.style.rotate(radius)
+    const radius = Math.floor(Math.random()*100) ;
+    console.log({radius});
+    
+    
   }
   
 
