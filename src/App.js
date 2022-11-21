@@ -14,7 +14,9 @@ function App() {
     
     
   }
-  
+
+
+ 
 
   return (
     <div className="App">
@@ -22,6 +24,7 @@ function App() {
         <div className='spin'>
 
           <h1>Spin the wheel </h1>
+          
 
           <span id="wheel"></span>
 
