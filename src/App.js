@@ -1,23 +1,41 @@
-
+import React , {useState} from 'react'
 import './App.css';
 
-function App() {
+class App extends React.Component {
+ 
+  state = {
+    color : 'red' ,
+    style : '' ,
+    radius : 99,
 
-  
-  const wheel = document.getElementById('wheel');
+  }
   
  
-  const handleButton = () => {
 
-    const radius = Math.floor(Math.random()*100) ;
-    console.log({radius});
+ 
+ 
+  handleButton = () => {
+   const  wheel = document.getElementById('wheel');
+   const  radius = Math.floor(Math.random()*100) ;
+
+   
+    this.setState(()=>({
+      color : 'green' ,
+      style : 'sxxx' ,
+      radius : radius
+    }))
+
+    }
+   
     
-    
+  
+  
+  
+   handleColor = () => {
+ 
   }
 
-
- 
-
+  render(){
   return (
     <div className="App">
 
@@ -25,14 +43,17 @@ function App() {
 
           <h1>Spin the wheel </h1>
           
-
+          <button  onClick={this.handleColor}>  Change color</button>
           <span id="wheel"></span>
 
-          <button className="spinButton"  onClick={handleButton}> Spin the wheel</button>
+          <button onClick={this.handleButton}> Spin the wheel radius {this.state.radius}</button>
       
          </div>
     </div>
-  );
-}
 
+)
+}
+}
 export default App;
+
+
