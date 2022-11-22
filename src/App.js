@@ -18,32 +18,37 @@ class App extends React.Component {
    const  wheel = document.getElementById('wheel');
    const  radius = Math.floor(Math.random()*100) ;
 
+   document.body.style.backgroundColor =  'blue'
+   wheel.style.backgroundColor = 'red'
+   wheel.style.rotate = {radius}+'deg'
    
     this.setState(()=>({
       color : 'green' ,
-      style : 'sxxx' ,
+      style : '',
       radius : radius
     }))
 
+    console.log(radius)
+
     }
-   
-    
   
-  
-  
-   handleColor = () => {
- 
-  }
+
+
+
 
   render(){
+
+    
+
   return (
+
+
     <div className="App">
 
         <div className='spin'>
 
-          <h1>Spin the wheel </h1>
+          <h1>Spin the wheel on radius : {this.state.radius}</h1>
           
-          <button  onClick={this.handleColor}>  Change color</button>
           <span id="wheel"></span>
 
           <button onClick={this.handleButton}> Spin the wheel radius {this.state.radius}</button>
