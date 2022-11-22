@@ -6,7 +6,7 @@ class App extends React.Component {
   state = {
     color : 'red' ,
     style : '' ,
-    radius : 99,
+    rotate : '180deg'
 
   }
   
@@ -19,15 +19,18 @@ class App extends React.Component {
    const  radius = Math.floor(Math.random()*100) ;
 
    document.body.style.backgroundColor =  'blue'
-   wheel.style.backgroundColor = 'red'
-   wheel.style.rotate = {radius}+'deg'
+   wheel.style.backgroundColor = this.state.color
+   wheel.style.rotate = radius 
    
     this.setState(()=>({
-      color : 'green' ,
+      color : 'blue' ,
       style : '',
-      radius : radius
+      rotate : radius
     }))
 
+
+    wheel.style.backgroundColor = this.state.color
+    wheel.style.rotate = this.state.rotate
     console.log(radius)
 
     }
