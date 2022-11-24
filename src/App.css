@@ -22,16 +22,17 @@ h1{
   
 }
 
-#wheel {
-  width: 150px;
-  height: 150px;
-  background-color: #fff;
-  border-radius: 20px;
+.wheel {
+  width: 200px;
+  height: 200px;
+  background-image: url(../src/img/kolo.PNG);
+  background-position: center;
+  border-radius: 80px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50% , -50%);
-  animation: wheelAnimation 10s 1s;
+  
   
 
 }
@@ -39,18 +40,24 @@ h1{
 .rotate {
   transform: rotate(0);
   background-color: aqua;
+  animation: wheelAnimation 10s 1s ease;
   
 }
 
 @keyframes wheelAnimation {
   0%{
+ 
+  
     transform: rotate(0deg);
+    
 
   }
 
   100%{
+    
+    
     transform: rotate(360deg);
-
+   
   }
   
 }
