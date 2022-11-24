@@ -4,9 +4,9 @@ import './App.css';
 class App extends React.Component {
  
   state = {
-    color : 'red' ,
+    
     style : '' ,
-    rotate : '180deg'
+   
 
   }
   
@@ -17,16 +17,14 @@ class App extends React.Component {
   handleButton = () => {
    const  wheel = document.getElementById('wheel');
    const  radius = Math.floor(Math.random()*100) ;
-
-   document.body.style.backgroundColor =  'blue'
-   wheel.style.backgroundColor = this.state.color
+  
    wheel.style.rotate = radius 
    wheel.classList.add('.rotate')
    
     this.setState(()=>({
-      color : 'blue' ,
+     
       style : '',
-      rotate : {radius}
+      
     }))
 
 
