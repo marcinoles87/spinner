@@ -21,11 +21,12 @@ class App extends React.Component {
    document.body.style.backgroundColor =  'blue'
    wheel.style.backgroundColor = this.state.color
    wheel.style.rotate = radius 
+   wheel.classList.add('.rotate')
    
     this.setState(()=>({
       color : 'blue' ,
       style : '',
-      rotate : radius
+      rotate : {radius}
     }))
 
 
@@ -52,7 +53,7 @@ class App extends React.Component {
 
           <h1>Spin the wheel on radius : {this.state.radius}</h1>
           
-          <span id="wheel"></span>
+          <span id="wheel" style={{rotate : this.state.radius}}></span>
 
           <button onClick={this.handleButton}> Spin the wheel radius {this.state.radius}</button>
       
