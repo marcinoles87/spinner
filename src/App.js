@@ -57,7 +57,7 @@ class App extends React.Component {
           
           <span className='wheel'></span>
 
-          <button onClick={this.handleButton}> Spin the wheel radius {this.state.radius}</button>
+          <button onClick={this.handleButton}> {this.state.activ ? "Spin the wheel radius" : "wartosc radius to : "}  {this.state.radius}</button>
       
          </div>
     </div>
