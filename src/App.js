@@ -5,8 +5,8 @@ class App extends React.Component {
  
   state = {
     
-    style : '' ,
-   
+    activ : false ,
+    radius : '' ,
 
   }
   
@@ -19,13 +19,18 @@ class App extends React.Component {
    const  radius = Math.floor(Math.random()*100) ;
   
   console.log(wheel)
+
+  
    wheel.classList.add('rotate')
    
     this.setState(()=>({
      
-      style : '',
+      activ : !this.state.activ ,
+      radius : radius
       
     }))
+
+  
 
 
    
