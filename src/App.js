@@ -24,6 +24,7 @@ class App extends React.Component {
     wheel.classList.add('rotate')
    } else {
     console.log("przestaje dzialac")
+    wheel.classList.remove('rotate');
    }
    
     this.setState(()=>({
