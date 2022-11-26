@@ -44,7 +44,9 @@ class App extends React.Component {
 
   render(){
 
-    const radius = 10;
+    const  radius = Math.floor(Math.random()*100) ;
+    const radiusNumber = radius;
+    console.log(radius);
 
   return (
 
@@ -54,10 +56,11 @@ class App extends React.Component {
         <div className='spin'>
 
           <h1>Spin the wheel on radius : {this.state.radius}</h1>
+          <h2> radius : {radiusNumber}</h2>
           
-          <span className='wheel'></span>
+          <span className='wheel' style={{color:"red"}}></span>
 
-          <button onClick={this.handleButton}> {this.state.activ ? "Spin the wheel radius" : "wartosc radius to :  " +{radius}}  </button>
+          <button onClick={this.handleButton}> {this.state.activ ? "Spin the wheel radius" : "wartosc radius to :  " +{radiusNumber}}  </button>
       
          </div>
     </div>
