@@ -1,6 +1,7 @@
 import React , {useState} from 'react'
 import './App.css';
 
+
 class App extends React.Component {
  
   state = {
@@ -11,6 +12,19 @@ class App extends React.Component {
   }
   
  
+  startSpinn = () => {
+
+    var spinValue1 = 0 ;
+    const spinValue2 = Math.floor(Math.random()*360) ;
+    var spinRotate = spinValue1 + spinValue2;
+
+    const  wheel = document.querySelector('.wheel');
+    console.log(spinRotate)
+
+    wheel.style.webkitTransform = 'rotate(' + spinRotate + 'deg)'
+    
+
+  }
 
  
  
@@ -21,7 +35,9 @@ class App extends React.Component {
 
    if(this.state.activ === true) { 
     console.log("dziala")
-    wheel.classList.add('rotate')
+    // wheel.classList.add('rotate')
+    this.startSpinn() ; 
+
    } else {
     console.log("przestaje dzialac")
     wheel.classList.remove('rotate');
@@ -34,11 +50,10 @@ class App extends React.Component {
       
     }))
 
-  
-
-
    
     console.log(radius)
+
+    
 
     }
   
@@ -62,7 +77,7 @@ class App extends React.Component {
           <h1>Spin the wheel on radius : {this.state.radius}</h1>
           <h2> radius : {radiusNumber}</h2>
           
-          <span className='wheel' style={{rotate:"35deg"}}></span>
+          <span className='wheel' style={{rotate:"330deg"+ {radius}}}></span>
 
           <button onClick={this.handleButton}> {this.state.activ ? "Spin the wheel radius" : "wartosc radius to :  " +{radiusNumber}}  </button>
       
