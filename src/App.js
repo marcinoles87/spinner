@@ -15,13 +15,16 @@ class App extends React.Component {
  
  
   handleButton = () => {
-   const  wheel = document.querySelector('.wheel');
-   const  radius = Math.floor(Math.random()*100) ;
-  
-  console.log(wheel)
 
-  
-   wheel.classList.add('rotate')
+    const  wheel = document.querySelector('.wheel');
+    const  radius = Math.floor(Math.random()*100) ;
+
+   if(this.state.activ === true) { 
+    console.log("dziala")
+    wheel.classList.add('rotate')
+   } else {
+    console.log("przestaje dzialac")
+   }
    
     this.setState(()=>({
      
@@ -58,7 +61,7 @@ class App extends React.Component {
           <h1>Spin the wheel on radius : {this.state.radius}</h1>
           <h2> radius : {radiusNumber}</h2>
           
-          <span className='wheel' style={{color:"red"}}></span>
+          <span className='wheel' style={{rotate:"35deg"}}></span>
 
           <button onClick={this.handleButton}> {this.state.activ ? "Spin the wheel radius" : "wartosc radius to :  " +{radiusNumber}}  </button>
       
