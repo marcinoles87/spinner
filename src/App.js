@@ -18,7 +18,7 @@ class App extends React.Component {
   ];
 
   newspaperTiming = {
-    duration: 1000,
+    duration: 2000,
     iterations: 1,
   }
   
@@ -27,9 +27,9 @@ class App extends React.Component {
 
 
 
-    var spinValue1 = 0 ;
+    
     const spinValue2 = Math.floor(Math.random()*360) ;
-    var spinRotate = spinValue1 + spinValue2;
+    var spinRotate = spinValue2 + this.state.spinR;
 
     const  wheel = document.querySelector('.wheel');
     console.log(spinRotate)
