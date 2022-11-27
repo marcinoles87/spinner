@@ -38,7 +38,6 @@ class App extends React.Component {
     wheel.style.webkitTransform = 'rotate(' + spinRotate + 'deg)'
     wheel.animate(this.newspaperSpinning , this.newspaperTiming)
     
-
   }
 
  
