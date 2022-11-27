@@ -10,9 +10,21 @@ class App extends React.Component {
     radius : '' ,
 
   }
+
+  newspaperSpinning = [
+    { transform: 'rotate(0) '+this.state.radius },
+    { transform: 'rotate(360deg) ' }
+  ];
+
+  newspaperTiming = {
+    duration: 2000,
+    iterations: 1,
+  }
   
  
   startSpinn = () => {
+
+
 
     var spinValue1 = 0 ;
     const spinValue2 = Math.floor(Math.random()*360) ;
@@ -21,7 +33,9 @@ class App extends React.Component {
     const  wheel = document.querySelector('.wheel');
     console.log(spinRotate)
 
+    // wheel.classList.add('rotate')
     wheel.style.webkitTransform = 'rotate(' + spinRotate + 'deg)'
+    wheel.animate(this.newspaperSpinning , this.newspaperTiming)
     
 
   }
@@ -35,7 +49,7 @@ class App extends React.Component {
 
    if(this.state.activ === true) { 
     console.log("dziala")
-    // wheel.classList.add('rotate')
+   
     this.startSpinn() ; 
 
    } else {
