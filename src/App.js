@@ -8,16 +8,17 @@ class App extends React.Component {
     
     activ : false ,
     radius : '' ,
+    spinR : Math.floor(Math.random()*360) ,
 
   }
 
   newspaperSpinning = [
-    { transform: 'rotate(0) '+this.state.radius },
-    { transform: 'rotate(360deg) ' }
+    { transform: 'rotate(0) ' } ,
+    { transform: 'rotate(0)'+this.state.spinR }
   ];
 
   newspaperTiming = {
-    duration: 2000,
+    duration: 1000,
     iterations: 1,
   }
   
