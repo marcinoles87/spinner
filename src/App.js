@@ -105,7 +105,6 @@ class App extends React.Component {
 
           <h1>Spin the wheel </h1>
           
-          
           <span className='wheel' ></span>
 
           <button onClick={this.handleButton}> {this.state.activ ? "Click to spin" : "stop   "}  </button>
