@@ -14,7 +14,7 @@ class App extends React.Component {
 
   newspaperSpinning = [
     { transform: 'rotate(0) ' } ,
-    { transform: 'rotate(100)'+this.state.spinR } ,
+    { transform: 'rotate(0)'+this.state.spinR } ,
      
   ];
 
@@ -39,11 +39,11 @@ class App extends React.Component {
     wheel.style.webkitTransform = 'rotate(' + spinRotate + 'deg)' 
     wheel.animate(this.newspaperSpinning , this.newspaperTiming)
 
-    if(spinRotate >350 ) {
+    if(spinRotate >300 ) {
       body.style.backgroundColor = 'red';
     }
 
-    else if(spinRotate < 350 && spinRotate >200 ) {
+    else if(spinRotate < 299 && spinRotate >200 ) {
       body.style.backgroundColor = 'blue';
     }
 
@@ -92,8 +92,8 @@ class App extends React.Component {
 
   render(){
 
-    const  radius = Math.floor(Math.random()*100) ;
-    const radiusNumber = radius;
+    
+   
     // console.log(radius);
 
   return (
@@ -103,12 +103,12 @@ class App extends React.Component {
 
         <div className='spin'>
 
-          <h1>Spin the wheel on radius : {this.state.radius}</h1>
-          <h2> radius : {radiusNumber}</h2>
+          <h1>Spin the wheel </h1>
           
-          <span className='wheel' style={{rotate:"330deg"+ {radius}}}></span>
+          
+          <span className='wheel' ></span>
 
-          <button onClick={this.handleButton}> {this.state.activ ? "Spin the wheel radius" : "wartosc radius to :  " +{radiusNumber}}  </button>
+          <button onClick={this.handleButton}> {this.state.activ ? "Click to spin" : "stop   "}  </button>
       
          </div>
     </div>
