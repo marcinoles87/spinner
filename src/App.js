@@ -14,7 +14,7 @@ class App extends React.Component {
 
   newspaperSpinning = [
     { transform: 'rotate(0) ' } ,
-    { transform: 'rotate(0)'+this.state.spinR }
+    { transform: 'rotate(100)'+this.state.spinR }
   ];
 
   newspaperTiming = {
@@ -25,7 +25,7 @@ class App extends React.Component {
  
   startSpinn = () => {
 
-
+    const  body = document.querySelector('body');
 
     
     const spinValue2 = Math.floor(Math.random()*360) ;
@@ -35,8 +35,20 @@ class App extends React.Component {
     console.log(spinRotate)
 
     // wheel.classList.add('rotate')
-    wheel.style.webkitTransform = 'rotate(' + spinRotate + 'deg)'
+    wheel.style.webkitTransform = 'rotate(' + spinRotate + 'deg)' 
     wheel.animate(this.newspaperSpinning , this.newspaperTiming)
+
+    if(spinRotate >350 ) {
+      body.style.backgroundColor = 'red';
+    }
+
+    else if(spinRotate < 350 && spinRotate >200 ) {
+      body.style.backgroundColor = 'blue';
+    }
+
+    else if(spinRotate < 200  ) {
+      body.style.backgroundColor = 'green';
+    }
     
   }
 
@@ -46,6 +58,7 @@ class App extends React.Component {
 
     const  wheel = document.querySelector('.wheel');
     const  radius = Math.floor(Math.random()*100) ;
+   
 
    if(this.state.activ === true) { 
     console.log("dziala")
@@ -60,7 +73,8 @@ class App extends React.Component {
     this.setState(()=>({
      
       activ : !this.state.activ ,
-      radius : radius
+      radius : radius ,
+      spinR : 0 , 
       
     }))
 
