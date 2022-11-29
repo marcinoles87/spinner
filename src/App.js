@@ -65,7 +65,7 @@ class App extends React.Component {
     }))
 
    
-    console.log(radius)
+    // console.log(radius)
 
     
 
@@ -79,7 +79,7 @@ class App extends React.Component {
 
     const  radius = Math.floor(Math.random()*100) ;
     const radiusNumber = radius;
-    console.log(radius);
+    // console.log(radius);
 
   return (
 
