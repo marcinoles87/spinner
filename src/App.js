@@ -14,7 +14,8 @@ class App extends React.Component {
 
   newspaperSpinning = [
     { transform: 'rotate(0) ' } ,
-    { transform: 'rotate(100)'+this.state.spinR }
+    { transform: 'rotate(100)'+this.state.spinR } ,
+     
   ];
 
   newspaperTiming = {

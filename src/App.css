@@ -43,6 +43,7 @@ h1{
 }
 
 .rotate {
+  
   transform: rotate(0);
   background-color: aqua;
   animation: wheelAnimation 5s 0.3s ease;
